@@ -19,7 +19,9 @@ function Main() {
           title: title,
           id: task.length+1
       }
-      settask([...task, newObj])
+      settask([...task,newObj])
+      console.log(e.target.firstChild.value)
+      e.target.firstChild.value= '';
 
     }
     return (

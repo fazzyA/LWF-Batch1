@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MediaCard from './MediaCard';
+import logo from './leader.gif'
+import Light from './Light';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Light/>
+    {/* <MediaCard title='Media card' body={<b>text</b>} imageUrl={logo} /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
