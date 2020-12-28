@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
-
+import Project from './Animation/Project';
 ReactDOM.render(
   <React.StrictMode>
-   <App/>
-    {/* <MediaCard title='Media card' body={<b>text</b>} imageUrl={logo} /> */}
+   <Project/>
   </React.StrictMode>,
   document.getElementById('root')
 );

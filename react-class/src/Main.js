@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
+import {useTransition, animated} from 'react-spring'
 
 function Main() {
     const [task, settask] = useState([
         { title: 'buy milk', id: 1 },
         { title: 'prepare tea', id: 2 }
     ])
-    const [title,settitle] = useState('');
+        const [title,settitle] = useState('');
+///animation
+const transitions = useTransition(task, task => task.id, {
+    from :{ marginLeft: - 500},
+    enter: {marginLeft: 20}})
+
+
     //  let res =  books.filter((item)=>item.id!=2)
    const handleChange = (e) => {
         console.log('change')
@@ -17,13 +24,14 @@ function Main() {
       e.preventDefault();
       let newObj = {
           title: title,
-          id: task.length+1
+          id: task.length+2
       }
       settask([...task,newObj])
-      console.log(e.target.firstChild.value)
-      e.target.firstChild.value= '';
+    //   console.log(e.target.firstChild.value)
+    //   e.target.firstChild.value= '';
 
     }
+    console.log(transitions)
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -32,14 +40,10 @@ function Main() {
             </form>
             <h2> To do list</h2>
             {
-                task.map(
-                    (item) => (
-                        <>
-                        <div key={item.id}>{item.title}</div>
-                        {/* <div>{item.id}</div> */}
-                        </>
-                    )
-                )
+                 transitions.map(
+                     ({ item, props, key }) =>
+                 <animated.div key={key} style={props}>{item.title}</animated.div>
+                 )
             }
         </div>
     )

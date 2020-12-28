@@ -3,7 +3,7 @@ import React from 'react'
 function Wrapup() {
     return (
         <div>
-
+Animation -- React spring , framer motion, anim js
         Portfolio -- skills--qualification--projects
         home -- Name-- skills--qual
         projects-- projects
@@ -17,6 +17,7 @@ function Wrapup() {
 
            material UI
            contextAPI
+           redux, redux toolkit
            storybook
            Formik
            redux
