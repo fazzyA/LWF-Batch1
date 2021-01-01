@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Project from './Animation/Project';
 ReactDOM.render(
   <React.StrictMode>
-   <Project/>
+   <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

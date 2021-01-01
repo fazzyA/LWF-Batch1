@@ -3,6 +3,13 @@ import React from 'react'
 function Wrapup() {
     return (
         <div>
+context api -- state: theme variable, light, dark , isLight: true
+light:{color: 'black', bg:'white'},
+dark:{color:'white',bg:'black'},
+isLight: true
+
+
+
 Animation -- React spring , framer motion, anim js
         Portfolio -- skills--qualification--projects
         home -- Name-- skills--qual
@@ -20,7 +27,6 @@ Animation -- React spring , framer motion, anim js
            redux, redux toolkit
            storybook
            Formik
-           redux
         </div>
     )
 }
