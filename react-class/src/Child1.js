@@ -2,6 +2,7 @@ import React from 'react'
 import { MyContext } from './MyContext'
 
 function Child1() {
+    
     return (
         <MyContext.Consumer>
             {

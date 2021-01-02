@@ -3,10 +3,10 @@ import React from 'react'
 function Wrapup() {
     return (
         <div>
-context api -- state: theme variable, light, dark , isLight: true
+{/* context api -- state: theme variable, light, dark , isLight: true
 light:{color: 'black', bg:'white'},
 dark:{color:'white',bg:'black'},
-isLight: true
+isLight: true */}
 
 
 

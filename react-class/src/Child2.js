@@ -1,28 +1,18 @@
-import { SettingsInputAntenna } from '@material-ui/icons'
 import React,{useContext} from 'react'
-import { MyContext } from './MyContext'
-
+import {useDispatch, useSelector} from 'react-redux'
+import {increment, decrement} from './redux/Action'
 function Child2() {
-    const context = useContext(MyContext)
-    console.log(context)  //state 0, setstate 1
-   const handleClick =()=>{
-       console.log(context[1])
-    //    setstate({num: 2})
-
-    }
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
+    console.log(state)
     return (
         <div>
-            text: {context[0].text}<br/>
-            Num: {context[0].num}<br/>
-            List: {
-                context[0].list.map(
-                    (item)=>(
-                        <div key={item.id}>{item.title}</div>
+            {` Num: ${state.num}
 
-                    )
-                )
-            }
-            <button onClick={()=>handleClick()}>Inc</button>
+            Num2: ${state.num2}`}<br/>
+
+            <button onClick={()=>dispatch(increment())}>Inc</button>
+            <button onClick={()=>dispatch(decrement())}>Dec</button>
         </div>
     )
 }
