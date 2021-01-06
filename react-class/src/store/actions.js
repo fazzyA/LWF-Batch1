@@ -1,12 +1,4 @@
-export function addtodo(todo){
-    return {
-        type: 'ADD',
-        payload:todo
-    }
-}
-export function deletetodo(id){
-    return {
-        type: 'DELETE',
-        payload: id
-    }
-}
+import {createAction} from '@reduxjs/toolkit'
+
+export const incrementAction = createAction('INCREMENT')
+export const decrementAction = createAction('DECREMENT')

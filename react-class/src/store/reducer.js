@@ -1,21 +1,13 @@
-const initialState = [
-    {title:'task1', id:1},
-    {title:'task2', id:2},
-    {title:'task2', id:3}
-]
-export default function myreducer(state = initialState, action) {
-    switch (action.type) {
-        case 'ADD':
-        console.log(action.payload)
-        let newTodo = action.payload
-        return [...state, newTodo]
-        case 'DELETE':
-            let id = action.payload
-            let newState = state.filter(item=>item.id!=id)
-            return newState
-
-        default:
-            return state
-
-    }
+import { createReducer } from '@reduxjs/toolkit'
+import { incrementAction, decrementAction} from './actions'
+const initialState = {
+    counter: 0,
+    num:1
 }
+const myreducer = createReducer(
+    initialState, {
+        [incrementAction]: (state)=> {counter:++state.counter},
+        [decrementAction]: (state)=> {counter:--state.counter}
+    }
+)
+export default myreducer

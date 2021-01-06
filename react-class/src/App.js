@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
-import Addtodo from './Addtodo'
+import CounterInput from './counterInput'
+import CounterOutput from './CounterOutput'
 function App() {
   return (
       <div>
-        <Addtodo/>
+        <CounterOutput/>
+        <CounterInput/>
     </div>
 
   )
