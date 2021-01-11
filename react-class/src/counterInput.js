@@ -1,6 +1,7 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import { decrementAction, incrementAction } from './store/actions'
+import Addtodo from './Addtodo'
+ import { decrementAction, incrementAction } from './store/slice'
 
 function CounterInput() {
     const dispatch = useDispatch()
@@ -8,6 +9,7 @@ function CounterInput() {
         <div>
             <button onClick={()=>dispatch(incrementAction())}>+</button>
             <button onClick={()=>dispatch(decrementAction())}>-</button>
+            <Addtodo/>
         </div>
     )
 }

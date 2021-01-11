@@ -1,9 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit'
-import myreducer from './reducer'
+// import myreducer from './reducer'
+import reducer from './slice'
 
 const store = configureStore(
     {
-        reducer:myreducer
+        reducer
     }
 )
 export default store

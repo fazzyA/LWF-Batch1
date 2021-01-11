@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Viewtodo from './Viewtodo'
 import {useDispatch} from 'react-redux'
-import {addtodo} from './store/actions'
+import {addtodo} from './store/slice'
 function Addtodo() {
     const [title, settitle] = useState('')
     const dispatch = useDispatch()

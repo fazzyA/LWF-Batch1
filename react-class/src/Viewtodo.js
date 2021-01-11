@@ -1,9 +1,9 @@
 import React from 'react'
 import {useSelector,useDispatch } from 'react-redux'
-import { deletetodo } from './store/actions'
+import { deletetodo } from './store/slice'
 
 function Viewtodo() {
- const todos = useSelector(state => state)
+ const todos = useSelector(state => state.todos)
  const dispatch = useDispatch()
  console.log(todos)
     return (
