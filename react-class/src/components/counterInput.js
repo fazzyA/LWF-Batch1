@@ -1,15 +1,13 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import Addtodo from './Addtodo'
- import { decrementAction, incrementAction } from './store/slice'
+ import { decrementAction, incrementAction } from '../store/mainSlice'
 
 function CounterInput() {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     return (
         <div>
             <button onClick={()=>dispatch(incrementAction())}>+</button>
             <button onClick={()=>dispatch(decrementAction())}>-</button>
-            <Addtodo/>
         </div>
     )
 }

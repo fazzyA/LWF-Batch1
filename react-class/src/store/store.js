@@ -1,10 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit'
-// import myreducer from './reducer'
-import reducer from './slice'
+import { myreducer } from './mainSlice'
 
-const store = configureStore(
-    {
-        reducer
-    }
-)
+const store = configureStore({
+    reducer: myreducer
+})
 export default store

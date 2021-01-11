@@ -1,14 +1,15 @@
 import React,{useState} from 'react'
 import Viewtodo from './Viewtodo'
 import {useDispatch} from 'react-redux'
-import {addtodo} from './store/slice'
+import { v4 as uuidv4 } from 'uuid';
+import { addtodo } from '../store/mainSlice';
 function Addtodo() {
     const [title, settitle] = useState('')
     const dispatch = useDispatch()
     const handleSubmit =(e)=>{
-        e.preventDefault()
+        e.preventDefault();
         console.log('im in submit')
-        let newObj = {title:title, id:Math.random()*Math.random()}
+        let newObj = {title, id:uuidv4()}
         dispatch(addtodo(newObj));
     }
     return (

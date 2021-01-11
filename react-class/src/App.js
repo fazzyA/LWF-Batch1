@@ -1,11 +1,14 @@
 import React,{useState} from 'react'
-import CounterInput from './counterInput'
-import CounterOutput from './CounterOutput'
+import Addtodo from './components/Addtodo'
+import CounterInput from './components/counterInput'
+import CounterOutput from './components/CounterOutput'
 function App() {
   return (
       <div>
         <CounterOutput/>
         <CounterInput/>
+        <hr/>
+        <Addtodo/>
     </div>
 
   )

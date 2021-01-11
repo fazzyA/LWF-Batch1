@@ -3,6 +3,16 @@ import React from 'react'
 function Wrapup() {
     return (
         <div>
+            contextAPI
+            reduxs
+            redux toolkit with slice
+            materialUi /antD
+            hooks
+            storybook formik
+            Gatsby with contentful
+
+
+
 {/* context api -- state: theme variable, light, dark , isLight: true
 light:{color: 'black', bg:'white'},
 dark:{color:'white',bg:'black'},
